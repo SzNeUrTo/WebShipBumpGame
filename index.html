@@ -23,6 +23,13 @@
 		color: #fff;
 		margin:0;
 	}
+
+	h2 {
+		font-size: 3em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
 	.intro p {
 		color: #fff;
 	}
@@ -50,7 +57,10 @@
 
 	.responsive {
 		max-width: 100%;
+		max-height: 615px;
 		height: auto;
+		margin-top: 3%;
+
 	}
 
 /*	@media all (max-width: 745px) {
@@ -78,8 +88,8 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				menu: '#menu',
-				anchors: ['Home', 'ScreenShot', 'Detail', 'How2Play', 'Download', 'About'],
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#7E8F7C'],
+				anchors: ['Home', 'How2Play', 'Detail', 'Download'],
+				sectionsColor: ['#C63D0F', '#F9A149', '#7E8F7C', '#F949D9'],
 				autoScrolling: true
 			});
 		});
@@ -88,16 +98,17 @@
 </head>
 <body>
 <ul id="menu">
-	<li data-menuanchor="Home" class="active"><a href="#Home">ShipBump</a></li>
-	<li data-menuanchor="ScreenShot"><a href="#ScreenShot">ScreenShot</a></li>
-	<li data-menuanchor="Detail"><a href="#Detail">Info</a></li>
+	<li data-menuanchor="Home" class="active"><a href="#Home">ShipBumpGame</a></li>
+	<!-- <li data-menuanchor="ScreenShot"><a href="#ScreenShot">ScreenShot</a></li> -->
 	<li data-menuanchor="How2Play"><a href="#How2Play">How2Play</a></li>
+	<li data-menuanchor="Detail"><a href="#Detail">Infomation</a></li>
+	
 	<li data-menuanchor="Download"><a href="#Download">Download</a></li>
-	<li data-menuanchor="About"><a href="#About">About</a></li>
+	<!-- <li data-menuanchor="About"><a href="#About">About</a></li> -->
 </ul>
 
 <div id="fullpage">
-	<div class="section " id="section0">
+<!-- 	<div class="section " id="section0">
 		<div class="intro">
 			<br><br>
 			<div class='embed-container'>
@@ -106,7 +117,7 @@
 			</div>
 
 		</div>
-	</div>
+	</div> -->
 
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1">
@@ -115,17 +126,35 @@
 		</div>
 
 	    <div class="slide" id="slide2">
-	    	<img src="http://www-03.ibm.com/ibm/history/ibm100/images/icp/O832173L45328I07/us__en_us__ibm100__emerge_cio__ibm_education_dept__920x640.jpg" class="responsive" />
+	    	<img src="./images/screenshot2.png" class="responsive" />
 		</div>
 
 		<div class="slide" id="slide3">
-			<img src="http://www.nriblogs.com/devices/iPhone/tv/xml/images/Retina-920x640.png" class="responsive"/>
+			<img src="./images/screenshot3.png" class="responsive" />
+		</div>
+
+		<div class="slide" id="slide4">
+			<img src="./images/screenshot4.png" class="responsive" />
+		</div>
+	</div>
+
+	
+
+
+	<div class="section" id="section3">
+		<div class="intro">
+			<img src="http://static.ddmcdn.com/gif/mice-stem-cells-101209-675634-.jpg" class="responsive" />
+			<h1>How2Play </h1>
+			<p>ใช้เมาส์ในการบังคับยาน <br>
+			คลิกซ้ายยิง คลิกขวาใช้ไอเท็ม</p>
+			<p>หากกด Enter จะทำให้เริ่มเกมใหม่</p>
 		</div>
 	</div>
 
 	<div class="section" id="section2">
 	    <div class="slide" id="slide1">
 			<div class="intro">
+				<img src="./images/game/Alien/SpriteKeepoloRed.png" class="responsive"/>
 				<h1>Infomation</h1>
 				<p>
 					รายละเอียดต่างๆภายในเกม
@@ -134,34 +163,212 @@
 		</div>
 
 	    <div class="slide" id="slide2">
-			<h1>Horizontal sliders!</h1>
-			<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
+			<div class="intro">		
+				<img src="./images/game/ship1.png" class="responsive" />
+				<h2>Ship</h2>
+				<p>
+					หากเอเลี่ยนหรืออุกกาบาตเพิ่งเข้าจอมาใหม่ <br>
+					จะเป็นตัวจางๆ หากโดนยานจะไม่เป็นไร <br>
+					หากสีเข้มแล้ว โดนยานจะแพ้ทันที <br>
+					กระสุน หนึ่งนัด มี damage = 10 <br>
+					ทุกๆวินาที score +1
+				</p>
+			</div>
 		</div>
+
+
+		<div class="slide">
+			<div class="intro">		
+				<img src="./images/game/obtacle2.png" class="responsive" />
+				<h2>อุกกาบาต</h2>
+				<p>
+					HP : 10<br>
+					Point : 10
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>Alien</h1>
+				<p>
+					หากไม่มี Alien ในจอ 4 วินาทีถัดมาจะสุ่มตัวใหม่
+				</p>
+			</div>
+		</div>
+
+
+		<div class="slide" id="slide2">
+			<div class="intro">
+				<img src="./images/game/Alien/Sprite3Eyes.png" class="responsive"/>
+				<h2>ชนเผ่า 3 ตา</h2>
+				<p>
+					HP : 50 <br>
+					Point : 1500 
+				</p>
+			</div>
+		</div>
+
+		<div class="slide" id="slide3">
+			<div class="intro">
+				<img src="./images/game/Alien/SpriteGengar_Left.png" class="responsive"/>
+				<h2>GenGar</h2>
+				<p>
+					HP : 80 <br>
+					Point : 2000 <br>
+					Effect : เมื่อตายจะเรียก ชนเผ่า3ตา 2 ตัว 
+				</p>
+			</div>
+		</div>
+
+		<div class="slide" id="slide4">
+			<div class="intro">
+				<img src="./images/game/Alien/SpriteKeepoloPink.png" class="responsive"/>
+				<h2>Keepolo</h2>
+				<p>
+					HP : 90 <br>
+					Point : 2500 <br>
+					Effect : เมื่อตายจะเรียก GenGar 3 ตัว 
+				</p>
+			</div>
+		</div>
+
+		<div class="slide" id="slide4">
+			<div class="intro">
+				<img src="./images/game/Alien/SpriteKeepoloRed.png" class="responsive"/>
+				<h2>HaneKeepolo</h2>
+				<p>
+					HP : 120 <br>
+					Point : 300 <br>
+					Effect : เมื่อตายจะเรียก Keepolo 4 ตัว 
+				</p>
+			</div>
+		</div>
+
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Alien/SpriteKeepoloPink.png" class="responsive"/>
+				<img src="./images/game/Alien/SpriteKeepoloRed.png" class="responsive"/>
+				<h1>Keepolo</h1>
+				<p>
+					มีต้นกำเนิดมาจากค่าย eXceed กลุ่มที่ 7 [ครั้งที่ 11]
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>Item</h1>
+				<p>
+					หากไม่มี Item ให้เก็บภายในจอ 10 วินาทีถัดมา <br>
+					จะมี Item เข้ามาใหม่
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_Baria.png" class="responsive"/>
+				<h2>Barrier</h2>
+				<p>
+					ป้องกันทุกอย่างเป็นเวลา 4 วินาที <br>
+					ใช้โจมตีใส่อุกกาบาตได้ <br>
+					โอกาส : 20 %
+				</p>
+			</div>
+		</div>
+
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_Dy.png" class="responsive"/>
+				<h2>DY</h2>
+				<p>
+					score +10000 <br>
+					โอกาส : 5 %
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_ManyTarget.png" class="responsive"/>
+				
+				<h2>ManyTarget</h2>
+				<p>
+					โจมตีรอบตัวโดยแบ่งมุมเท่าๆกัน <br>
+					โอกาส : 20 %
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Sprite_Random_Target.png" class="responsive"/>
+				<p>
+					โอกาสได้แต่ละแบบ เท่ากันหมด
+				</p>
+			</div>
+		</div>
+
+
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_Nuclear.png" class="responsive"/>
+				<h2>Nuclear</h2>
+				<p>
+					ทำลายล้างทุกสิ่งทุกอย่างเป็นเวลา 2 วินาที <br>
+					โอกาส : 15 %
+				</p>
+			</div>
+		</div>
+
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_Random.png" class="responsive"/>
+				<h2>Random</h2>
+				<p>
+					สุ่ม Item ใหม่ ที่ไม่ใช่ Random <br>
+					โอกาส : 25 %
+				</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<img src="./images/game/Item/Item_TimePause.png" class="responsive"/>
+				<h2>TimePause</h2>
+				<p>
+					หยุดทุกอย่างเป็นเวลา 6 วินาที <br>
+					โอกาส : 15 %
+				</p>
+			</div>
+		</div>
+
 	</div>
 
-	<div class="section" id="section3">
-		<div class="intro">
-			<h1>How2Play </h1>
-			<p>ใช้เมาส์ในการบังคับยาน คลิกซ้ายยิง คลิกขวาใช้ไอเท็ม</p>
-			<p>หากกด Enter จะทำให้เริ่มเกมใหม่</p>
-		</div>
-	</div>
 
 	<div class="section" id="section4">
 		<div class="intro">
+			<img src="http://icons.iconarchive.com/icons/rade8/minium-2/256/Sidebar-Downloads-icon.png" class="responsive" />
 			<h1>Download </h1>
-			<p>https://java.com/en/download/</p>
+			<a href="http://www.mediafire.com/download/61jqnysc8cwh6ok/ShipBumpGame_920x640.jar"><p><u>ShipbumpGame</u></p></a>
+			<a href="https://java.com/en/download/"><p><u>Java</u></p></a>
 		</div>
 	</div>
 
 
 
-	<div class="section" id="section5">
+<!-- 	<div class="section" id="section5">
 		<div class="intro">
 			<h1>About </h1>
 			<p>Game </p>
 		</div>
-	</div>
+	</div> -->
+
 </div>
 
 </body>
